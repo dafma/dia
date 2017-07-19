@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interauto</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"  crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://use.fontawesome.com/9d2185a041.js"></script>
+    <style rel="stylesheet">
+        .mes{
+            background-color: #F57C00;
+        }
+        .C01{
+            background-color: #009688;
+        }
+        .C02{
+            background-color: #FFC107;
+
+        }
+        .C03{
+
+        }
+        .rojo{
+            color: #ff1e26;
+            text-shadow: 1px 1px 1px #ccc;
+            font-size: 1.5em;
+        }
+        .amarillo{
+            color: #fff721;
+            text-shadow: 1px 1px 1px #ccc;
+            font-size: 1.5em;
+        }
+        .verde{
+            color: #27ff11;
+            text-shadow: 1px 1px 1px #ccc;
+            font-size: 1.5em;
+        }
+
+        .meses{
+            background-color: #F57C00;
+        }
+
+        .azul{
+            background-color: dodgerblue;
+        }
+        td{text-align: center}
+        th{
+            text-align: center;
+            font-size: xx-large;
+        }
+        .btn-circle {
+          width: 10px;
+          height: 10px;
+          text-align: center;
+          padding: 6px 0;
+          font-size: 8px;
+          line-height: 1.428571429;
+          border-radius: 15px;
+        }
+          td {   text-align: center;}
+          #span1 { background-color: #FFEB3B; width: auto ; }
+          #span2 { background-color: #2196F3; width: auto;  }
+          #span3 { background-color: #673AB7; width: auto;  }
+          #span4 { background-color: #1B5E20; width: auto;  }
+
+    </style>
+    {% block addcss %}
+
+    {% endblock %}
+
+</head>
+<body>
+
+{% block navbarmenu %}
+
+{% endblock %}
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h1 class="modal-title" id="exampleModalLabel">Detalle</h1>
+                    <button class="btn btn-primary btn-lg btn-block">VerInfo</button>
+                </div>
+                <div class="modal-body">
+                    <div id="orderDetails"></div>
+                     <table class="table table-bordered">
+                    <tr>
+                        <th>Concepto</th>
+                        <th>Estatus</th>
+                    </tr>
+                    <tr>
+                        <td>Numero Contenedor</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de Llegada</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Forwater</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Numero de Mercancia</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Puerto Llegada</td>
+                        <td></td>
+                    </tr>
+                </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="row">
+    {% block tabla %}
+
+    {% endblock %}
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+{% block addjs %}
+
+{% endblock %}
+
+<style>
+    .modal-dialog {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+}
+</style>
+
+<script>
+    $(function(){
+    $('#exampleModal1').modal({
+        keyboard: true,
+        backdrop: "static",
+        show:false,
+
+    }).on('show', function(){
+          var getIdFromRow = $(event.target).closest('tr').data('id');
+        //make your ajax call populate items or what even you need
+        $(this).find('#orderDetails').html($('<h1> Order Id selected: ' + getIdFromRow  + '</h1>'))
+    });
+});
+
+
+$(document).ready(function() {
+
+    // AJAX GET
+    $('.get-more').click(function(){
+
+        $.ajax({
+            type: "GET",
+            url: "/ajax/more/",
+            success: function(data) {
+            for(i = 0; i < data.length; i++){
+                $('ul').append('<li>'+data[i]+'</li>');
+            }
+        }
+        });
+
+    });
+
+
+    // AJAX POST
+    $('.add-todo').click(function(){
+      console.log('am i called');
+
+        $.ajax({
+            type: "POST",
+            url: "/ajax/add/",
+            dataType: "json",
+            data: { "item": $(".todo-item").val() },
+            success: function(data) {
+                alert(data.message);
+            }
+        });
+
+    });
+
+
+
+    // CSRF code
+    function getCookie(name) {
+        var cookieValue = null;
+        var i = 0;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (i; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        crossDomain: false, // obviates need for sameOrigin test
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type)) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+
+
+});
+</script>
+
+</body>
+</html>

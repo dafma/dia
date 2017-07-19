@@ -1,0 +1,29 @@
+{% include "base.html" %}
+{% block tabla %}
+<table class="table">
+<thead>
+ <tr>
+{% for foo in cabeceras %}
+
+        <th>{{ foo.SemanaDelYear }}
+            <hr>
+            {{ foo.SemanaMasSiete }}
+        </th>
+
+{% endfor %}
+</tr>
+    <tr>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+{% for foo in habilitados %}
+    <tr>
+        <td>{{ foo.Referencia }}</td>
+    </tr>
+{% endfor %}
+
+
+</tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,989 @@
+{% include "base.html" %}
+{% block addcss%}
+{% endblock %}
+{% block tabla %}
+    {% comment %}
+        <div class="row">
+        {% regroup fac by SemanaDelYear as C01 %}
+        {% for foo in C01 %}
+            <li>{{ foo.SemanaDelYear }}</li>
+        {% endfor %}
+    </div>
+    {% endcomment %}
+
+<table class="table table-bordered">
+<thead>
+ <tr>
+{% for foo in barrasemanas %}
+
+        <th>{{ foo.SemanaDelYear }}
+            <hr>
+            {{ foo.SemanaMasSiete }}
+        </th>
+{% endfor %}
+</tr>
+    <tr>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+
+<tr>
+    <td  class="C01" >Enero</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 1 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Febrero</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 2 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Marzo</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 3 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Abril</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 4 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Mayo</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 5 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Junio</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 6 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Julio</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 7 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Agosto</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 8 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Septiembre</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 9 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Octubre</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 10 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Noviembre</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 11 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Diciembre</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 12 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td></td>
+</tr>
+<tr>
+    <td  class="C02" >Enero</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 1 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Febrero</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 2 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Marzo</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 3 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Abril</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 4 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Mayo</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 5 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Junio</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 6 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Julio</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 7 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Agosto</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 8 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Septiembre</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 9 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Octubre</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 10 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Noviembre</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 11 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Diciembre</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 12 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+
+<tr>
+    <td></td>
+</tr>
+<tr>
+    <td  class="mes" >Enero</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 1 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Febrero</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 2 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Marzo</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 3 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Abril</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 4 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Mayo</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 5 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Junio</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 6 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Julio</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 7 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Agosto</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 8 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Septiembre</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 9 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Octubre</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 10 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Noviembre</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 11 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Diciembre</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 12 %}
+        <td>
+            {{ foo.Agente }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+
+
+
+
+
+{% comment %}
+<tr>
+{% for foo in C01 %}
+
+    {% if foo.SemanaDelYear == 1 %}
+        <td class="{{foo.SemanaDelYear}}">
+            {{foo.SemanaDelYear}}
+            <hr>{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 2 %}
+        <td class="{{foo.SemanaDelYear}}">
+            <hr>{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 3 %}
+        <td class="{{foo.SemanaDelYear}}">
+            <hr>{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 4 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 5 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 6 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 7 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 8 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 9 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 10 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 11 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 12 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 13 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 14 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 15 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 16 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 17 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 18 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+
+    {% if foo.SemanaDelYear == 19 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+
+    {% if foo.SemanaDelYear == 20 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 21 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 22 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 23 %}
+            <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 24 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 25 %}
+        <td  class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 26 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 27 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 28 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 29 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+        {% if foo.SemanaDelYear == 30 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 31 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 32 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 33 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+
+    {% endif %}    {% if foo.SemanaDelYear == 34 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+
+    {% endif %}
+    {% if foo.SemanaDelYear == 35 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+
+    {% endif %}
+        {% if foo.SemanaDelYear == 36 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+
+    {% endif %}
+    {% if foo.SemanaDelYear == 37 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 38 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 39 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 40 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+    {% endif %}
+        {% if foo.SemanaDelYear == 41 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+    {% if foo.SemanaDelYear == 42 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 43 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 44 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 45 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+    {% if foo.SemanaDelYear == 46 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+    {% if foo.SemanaDelYear == 47 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 48 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+    {% if foo.SemanaDelYear == 49 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 50 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 51 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+     {% if foo.SemanaDelYear == 52 %}
+        <td class="{{foo.SemanaDelYear}}">{{foo.SemanaDelYear}}-{{ foo.Referencia}}</td>
+              {% endif %}
+{% endfor %}
+</tr>
+
+<tr>
+{% for foo in C02 %}
+    {{ foo.SemanaDelYear }}
+
+    {% if foo.SemanaDelYear == 1 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 2 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 3 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 4 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 5 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 6 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 7 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 8 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 9 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 10 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 11 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 12 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 13 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 14 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 15 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 16 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+
+    {% if foo.SemanaDelYear == 17 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+
+    {% if foo.SemanaDelYear == 18 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+
+    {% if foo.SemanaDelYear == 19 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+
+    {% if foo.SemanaDelYear == 20 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 21 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 22 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 23 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 24 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 25 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 26 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 27 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 28 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 29 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+        {% if foo.SemanaDelYear == 30 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 31 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 32 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 33 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}    {% if foo.SemanaDelYear == 34 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+    {% if foo.SemanaDelYear == 35 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+        {% if foo.SemanaDelYear == 36 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+    {% if foo.SemanaDelYear == 37 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 38 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 39 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 40 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 41 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}    {% if foo.SemanaDelYear == 42 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 43 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 44 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 45 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}    {% if foo.SemanaDelYear == 46 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}    {% if foo.SemanaDelYear == 47 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 48 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}    {% if foo.SemanaDelYear == 49 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 50 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 51 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+     {% if foo.SemanaDelYear == 52 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td rowspan="" class="naranja"></td>
+</tr>
+<tr>
+{% for foo in C03 %}
+
+    {% if foo.SemanaDelYear == 1 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 2 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 3 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 4 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 5 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 6 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 7 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 8 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 9 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 10 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 11 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 12 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 13 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 14 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 15 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 16 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+
+    {% if foo.SemanaDelYear == 17 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+
+    {% if foo.SemanaDelYear == 18 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+
+    {% if foo.SemanaDelYear == 19 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+
+    {% if foo.SemanaDelYear == 20 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 21 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 22 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 23 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 24 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+
+    {% if foo.SemanaDelYear == 25 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 26 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 27 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 28 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 29 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+        {% if foo.SemanaDelYear == 30 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 31 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 32 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+    {% if foo.SemanaDelYear == 33 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}    {% if foo.SemanaDelYear == 34 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+    {% if foo.SemanaDelYear == 35 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+        {% if foo.SemanaDelYear == 36 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+
+    {% endif %}
+    {% if foo.SemanaDelYear == 37 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 38 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 39 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 40 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 41 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}    {% if foo.SemanaDelYear == 42 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 43 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 44 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 45 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}    {% if foo.SemanaDelYear == 46 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}    {% if foo.SemanaDelYear == 47 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 48 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}    {% if foo.SemanaDelYear == 49 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 50 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+        {% if foo.SemanaDelYear == 51 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+              {% endif %}
+     {% if foo.SemanaDelYear == 52 %}
+        <td class="{{foo.SemanaDelYear}}">{{ foo.Referencia}}</td>
+    {% endif %}
+{% endfor %}
+</tr>
+{% endcomment %}
+
+
+
+
+</tbody>
+</table>
+{% endblock %}
