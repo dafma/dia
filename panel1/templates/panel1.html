@@ -1,5 +1,11 @@
 {% include "base.html" %}
 {% block addcss%}
+    <style>
+    ._24{
+        background-color: #2196F3;
+    }
+
+    </style>
 {% endblock %}
 {% block tabla %}
     {% comment %}
@@ -14,6 +20,7 @@
 <table class="table table-bordered">
 <thead>
  <tr>
+ <th>Meses</th>
 {% for foo in barrasemanas %}
 
         <th>{{ foo.SemanaDelYear }}
@@ -33,7 +40,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 1 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -43,7 +50,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 2 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -53,7 +60,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 3 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -63,7 +70,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 4 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -73,7 +80,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 5 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -82,9 +89,9 @@
     <td  class="C01" >Junio</td>
     {% for foo in C01 %}
     {% if foo.Mes == 6 %}
-        <td>
-            {{ foo.Agente }}
-        </td>
+            {% if foo.SemanaDelYear == 24 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}</td>
+            {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
@@ -93,7 +100,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 7 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -103,7 +110,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 8 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -113,7 +120,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 9 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -123,7 +130,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 10 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -133,7 +140,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 11 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -143,7 +150,7 @@
     {% for foo in C01 %}
     {% if foo.Mes == 12 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -156,7 +163,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 1 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -166,7 +173,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 2 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -176,7 +183,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 3 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -186,7 +193,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 4 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -196,7 +203,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 5 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -206,7 +213,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 6 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -216,7 +223,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 7 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -226,7 +233,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 8 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -236,7 +243,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 9 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -246,7 +253,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 10 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -256,7 +263,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 11 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -266,7 +273,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 12 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -280,7 +287,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 1 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -290,7 +297,7 @@
     {% for foo in C02 %}
     {% if foo.Mes == 2 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -300,7 +307,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 3 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -310,7 +317,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 4 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -320,7 +327,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 5 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -330,7 +337,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 6 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -340,7 +347,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 7 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -350,7 +357,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 8 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -360,7 +367,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 9 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -370,7 +377,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 10 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -380,7 +387,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 11 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -390,7 +397,7 @@
     {% for foo in C03 %}
     {% if foo.Mes == 12 %}
         <td>
-            {{ foo.Agente }}
+            {{ foo.Referencia }}
         </td>
     {% endif %}
 {% endfor %}
@@ -982,7 +989,7 @@
 {% endcomment %}
 
 
-
+{{ serializarJson }}
 
 </tbody>
 </table>
