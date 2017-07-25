@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include("panel1.urls", namespace='base')),
+    url(r'^cabecera/', include("cabeceraresponsive.urls", namespace='cabecera')),
 ]

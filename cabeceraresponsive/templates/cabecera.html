@@ -1,0 +1,410 @@
+{% include "base.html" %}
+{% block addcss%}
+    <style>
+    ._24{
+        background-color: #2196F3;
+    }
+
+    </style>
+{% endblock %}
+{% block tabla %}
+    {% comment %}
+        <div class="row">
+        {% regroup fac by SemanaDelYear as C01 %}
+        {% for foo in C01 %}
+            <li>{{ foo.SemanaDelYear }}</li>
+        {% endfor %}
+    </div>
+    {% endcomment %}
+
+<table class="table table-bordered">
+<thead>
+ <tr>
+ <th>Meses</th>
+{% for foo in barrasemanas %}
+
+        <th>{{ foo.SemanaDelYear }}
+            <hr>
+            {{ foo.SemanaMasSiete }}
+        </th>
+{% endfor %}
+</tr>
+    <tr>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+
+<tr>
+    <td  class="C01" >Enero</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 1 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Febrero</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 2 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Marzo</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 3 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Abril</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 4 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Mayo</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 5 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Junio</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 6 %}
+            {% if foo.SemanaDelYear == 24 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}</td>
+            {% endif %}
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Julio</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 7 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Agosto</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 8 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Septiembre</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 9 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Octubre</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 10 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Noviembre</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 11 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C01" >Diciembre</td>
+    {% for foo in C01 %}
+    {% if foo.Mes == 12 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td></td>
+</tr>
+<tr>
+    <td  class="C02" >Enero</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 1 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Febrero</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 2 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Marzo</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 3 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Abril</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 4 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Mayo</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 5 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Junio</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 6 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Julio</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 7 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Agosto</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 8 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Septiembre</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 9 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Octubre</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 10 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Noviembre</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 11 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="C02" >Diciembre</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 12 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+
+<tr>
+    <td></td>
+</tr>
+<tr>
+    <td  class="mes" >Enero</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 1 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Febrero</td>
+    {% for foo in C02 %}
+    {% if foo.Mes == 2 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Marzo</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 3 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Abril</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 4 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Mayo</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 5 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Junio</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 6 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Julio</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 7 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Agosto</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 8 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Septiembre</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 9 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Octubre</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 10 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Noviembre</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 11 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+<tr>
+    <td  class="mes" >Diciembre</td>
+    {% for foo in C03 %}
+    {% if foo.Mes == 12 %}
+        <td>
+            {{ foo.Referencia }}
+        </td>
+    {% endif %}
+{% endfor %}
+</tr>
+
+{{ serializarJson }}
+
+</tbody>
+</table>
+{% endblock %}

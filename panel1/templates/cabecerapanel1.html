@@ -1,0 +1,274 @@
+{% load staticfiles %}
+{% include "base.html" %}
+{% block addcss%}
+
+
+    <style>
+    ._24{
+        background-color: #2196F3;
+    }
+        ul#menu li {
+        display:inline;
+    }
+
+    .C01{
+        background-color: #FFB74D;
+    }
+    .C02{
+       background-color: #B39DDB;
+    }
+    .C03{
+        background-color: #BBDEFB;
+    }
+    .xbC01{
+        background-color: #FFB74D;
+    }
+    .xbC02{
+       background-color: #B39DDB;
+    }
+    .xbC03{
+        background-color: #BBDEFB;
+    }
+    .btn-azul{
+        background-color: #2962FF;
+        color: #FFFFFF;
+    }
+    .btn-morado{
+        background-color: #6A1B9A;
+        color: #FFFFFF;
+    }
+    .btn-naranja{
+        background-color: #FF9800;
+        color: #FFFFFF;
+    }
+    .btn-todos{
+        background-color: #F44336;
+        color: #ffffff;
+    }
+    .colormes{
+        background-color: #004d40;
+        color: #cccccc;
+    }
+    .colormesatrasado{
+               background-color: #F44336;
+        color: #cccccc;
+    }
+    .navbar-default {
+        background-color: #004d40;
+        border-color: #004d40;
+    }
+    </style>
+{% endblock %}
+{% block tabla %}
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">INTERAUTO</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel">Detalle</h1>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Referencia</th>
+                    <th>Semanas</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><h1>664-27</h1></td>
+                <td><h1>20/7</h1></td>
+            </tr>
+
+            </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#enforma" aria-controls="enforma" role="tab" data-toggle="tab">En Forma</a></li>
+                <li role="presentation"><a href="#retrasos" aria-controls="profile" role="tab" data-toggle="tab">Retrasos</a></li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="enforma">
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                    <div class="btn-group btn-group-lg">
+                                        <button type="button" class="btn btn-todos control" data-filter="all">TODOS</button>
+                                        <button type="button" class="btn btn-naranja control"  data-filter=".C01">ANY</button>
+                                        <button type="button" class="btn btn-morado control" data-filter=".C02">JENYY</button>
+                                        <button type="button" class="btn btn-azul control" data-filter=".C03">PAU</button>
+                                        <button type="button" class="btn btn-link control" data-filter="DX">DX</button>
+                                    </div>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+
+    <hr>
+
+
+<div class="row">
+    <div class="reads">
+            {% regroup todo by SemanaDelYear  as semana_list %}
+            {% for SemanaDelYear in semana_list  %}
+                <div class="col-md-1 col-xs-1">
+                    <table class="table">
+                        <tr>
+                            <th class="mes colormes">{{ SemanaDelYear.grouper }}</th>
+                        <tr>
+                        {% for foo in SemanaDelYear.list %}
+                            <tr>
+                            {% regroup foo by fo.Agente as agente_list %}
+                                <td class="mix {{foo.Agente}}" data-toggle="modal" data-target="#myModal" >
+
+                                    <i class="fa fa-gift" aria-hidden="true"></i>
+                                    {{ foo.Referencia }}
+                                        <div class="row">
+                                          <span class="label label-primary">1</span>
+                                        <span class="label label-success">2</span>
+                                        <span class="label label-warning">3</span>
+                                        <span class="label label-danger">4</span>
+                                        </div>
+
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            {% endfor %}
+    </div>
+</div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="retrasos">
+
+                    <div class="row">
+                        <div class="readsa">
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                        <div class="btn-group btn-group-lg">
+                                            <button type="button" class="btn btn-todos control" data-filter="all">TODOS</button>
+                                            <button type="button" class="btn btn-naranja control"  data-filter=".xbC01">ANY</button>
+                                            <button type="button" class="btn btn-morado control" data-filter=".xbC02">JENYY</button>
+                                            <button type="button" class="btn btn-azul control" data-filter=".xbC03">PAU</button>
+                                            <button type="button" class="btn btn-link control" data-filter="xbDX">DX</button>
+                                        </div>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                            <br>
+                                {% regroup todo by SemanaDelYear  as semana_list %}
+                                {% for SemanaDelYear in semana_list  %}
+                                    <div class="col-md-1 col-xs-1">
+                                        <table class="table">
+                                            <tr>
+                                                <th class="mes colormesatrasado">{{ SemanaDelYear.grouper }}</th>
+                                            <tr>
+                                            {% for foo in SemanaDelYear.list %}
+                                                <tr>
+                                                {% regroup foo by fo.Agente as agente_list %}
+                                                    <td class="mix xb{{foo.Agente}}" data-toggle="modal" data-target="#myModal" >
+                                                        <!-- <a href="referencia/{{ foo.ID }}">   </a> -->
+                                                        <i class="fa fa-gift" aria-hidden="true"></i>
+                                                        {{ foo.Referencia }}
+                                                            <div class="row">
+                                                              <span class="label label-primary">1</span>
+                                                            <span class="label label-success">2</span>
+                                                            <span class="label label-warning">3</span>
+                                                            <span class="label label-danger">4</span>
+                                                            </div>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                        </table>
+                                    </div>
+                                {% endfor %}
+                         </div>
+                </div>
+                </div>
+              </div>
+        </div>
+    <div>
+</div>
+    </div>
+
+
+    <!--  <div class="row">
+        <div class="col-md-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="colormes">Comprador</th>
+                    </tr>
+                </thead>
+            <tbody>
+            <tr>
+                <td class="comprador C01">ANY</td>
+            </tr>
+            <tr>
+                <td class="comprador C02">JENNY</td>
+            </tr>
+            <tr>
+                <td class="comprador C03">PAU</td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>-->
+    <hr>
+
+
+{% endblock %}
+{% block addjs %}
+  <script src="{% static "mixitup.min.js" %}"></script>
+           <script>
+            var containerEl = document.querySelector('.reads');
+
+            var mixer = mixitup(containerEl);
+        </script>
+               <script>
+            var containerEl = document.querySelector('.readsa');
+
+            var mixer = mixitup(containerEl);
+        </script>
+{% endblock %}

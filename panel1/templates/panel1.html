@@ -1,34 +1,156 @@
+{% load staticfiles %}
 {% include "base.html" %}
 {% block addcss%}
+  <style rel="stylesheet" type="text/css" href="{% static 'style.css'  %}" ></style>
     <style>
-    ._24{
-        background-color: #2196F3;
+    .pau{
+        background-color: #558b2f;
+    }
+    .jenny{
+        background-color: #ffff00;
+    }
+    .any{
+        background-color: #3d5afe;
     }
 
+    .letras{
+        height: auto;
+        width: auto;
+        font-size: 20px;
+        align-items: center;
+        font-weight: 900;
+        top: 50%;
+            -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    }
     </style>
 {% endblock %}
 {% block tabla %}
-    {% comment %}
-        <div class="row">
-        {% regroup fac by SemanaDelYear as C01 %}
-        {% for foo in C01 %}
-            <li>{{ foo.SemanaDelYear }}</li>
-        {% endfor %}
-    </div>
-    {% endcomment %}
+
 
 <table class="table table-bordered">
 <thead>
  <tr>
- <th>Meses</th>
-{% for foo in barrasemanas %}
+ <th class="meses" >Fecha Emision</th>
+ <th class="meses">
+     Fecha Entrega
+     <hr>
+     Fecha Entrega + 7
+ </th>
+                    <th  class="meses">1
+                        <hr> 7</th>
+                    <th  class="meses">2
+                        <hr> 9</th>
+                    <th  class="meses">3
+                        <hr> 10</th>
+                    <th  class="meses">4
+                        <hr> 11</th>
+                    <th  class="meses">5
+                        <hr> 12</th>
+                    <th  class="meses">6
+                        <hr> 13</th>
+                    <th  class="meses">7
+                        <hr> 14</th>
+                    <th  class="meses">8
+                        <hr> 15</th>
+                    <th  class="meses">9
+                        <hr> 16</th>
+                    <th  class="meses">10
+                        <hr> 17</th>
+                    <th  class="meses">11
+                        <hr> 18</th>
+                    <th  class="meses">12
+                        <hr> 19</th>
+                    <th  class="meses">13
+                        <hr> 20</th>
+                    <th  class="meses">14
+                        <hr> 21</th>
+                    <th  class="meses">15
+                        <hr> 22</th>
+                    <th  class="meses">16
+                        <hr> 23</th>
+                    <th  class="meses">17
+                        <hr> 24</th>
+                    <th  class="meses">18
+                        <hr> 25</th>
+                    <th  class="meses">19
+                        <hr> 26</th>
+                    <th  class="meses">20
+                        <hr> 27</th>
+                    <th  class="meses">21
+                        <hr> 28</th>
+                    <th class="meses">22
+                        <hr> 28</th>
+                    <th  class="meses">23
+                        <hr> 30</th>
+                    <th  class="meses">24
+                        <hr> 31</th>
+                    <th  class="meses">25
+                        <hr> 32</th>
+                    <th  class="meses">26
+                        <hr> 33</th>
+                    <th  class="meses">27
+                        <hr> 34</th>
+                    <th  class="meses">28
+                        <hr> 35</th>
+                    <th  class="meses">29
+                        <hr> 36</th>
+                    <th  class="meses">30
+                        <hr> 37</th>
+                    <th  class="meses">31
+                        <hr> 38</th>
+                    <th  class="meses">32
+                        <hr> 39</th>
+                    <th  class="meses">33
+                        <hr> 40</th>
+                    <th  class="meses">34
+                        <hr> 41</th>
+                    <th  class="meses">35
+                        <hr> 42</th>
+                    <th  class="meses">36
+                        <hr> 43</th>
+                    <th  class="meses">37
+                        <hr> 44</th>
+                    <th  class="meses">38
+                        <hr> 45</th>
+                    <th  class="meses">39
+                        <hr> 46</th>
+                    <th  class="meses">40
+                        <hr> 47</th>
+                    <th  class="meses">41
+                        <hr> 48</th>
+                    <th  class="meses">42
+                        <hr> 49</th>
+                    <th  class="meses">43
+                        <hr> 50</th>
+                    <th  class="meses">44
+                        <hr> 51</th>
+                    <th  class="meses">45
+                        <hr> 52</th>
+                    <th  class="meses">46
+                        <hr> 1</th>
+                    <th  class="meses">47
+                        <hr> 2</th>
+                    <th  class="meses">48
+                        <hr> 3</th>
+                    <th  class="meses">49
+                        <hr> 4</th>
+                    <th  class="meses">50
+                        <hr> 5</th>
+                    <th  class="meses">51
+                        <hr> 6</th>
+                    <th  class="meses">52<hr> 7</th>
 
-        <th>{{ foo.SemanaDelYear }}
-            <hr>
-            {{ foo.SemanaMasSiete }}
-        </th>
-{% endfor %}
-</tr>
+                </tr>
+ <hr>
     <tr>
         <th></th>
     </tr>
@@ -36,376 +158,2342 @@
 <tbody>
 
 <tr>
-    <td  class="C01" >Enero</td>
+
+    <td  class="meses" >Enero</td>
+    <td rowspan="12" class="any" >
+                <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="letras ">
+         ANY
+        </div>
+    </td>
     {% for foo in C01 %}
     {% if foo.Mes == 1 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 1 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% else %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 2 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 3%}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 4 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Febrero</td>
+    <td  class="meses" >Febrero</td>
     {% for foo in C01 %}
     {% if foo.Mes == 2 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 5 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 6 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 7 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 8 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Marzo</td>
+    <td  class="meses" >Marzo</td>
     {% for foo in C01 %}
     {% if foo.Mes == 3 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 9 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 10 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 11 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 12 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Abril</td>
+    <td  class="meses" >Abril</td>
     {% for foo in C01 %}
     {% if foo.Mes == 4 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 13 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 14 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 15 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 16 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Mayo</td>
+    <td  class="meses" >Mayo</td>
     {% for foo in C01 %}
     {% if foo.Mes == 5 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 17 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 18 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 19 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 20 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 21 %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                        <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 22 %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                        <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Junio</td>
+    <td  class="meses" >Junio</td>
     {% for foo in C01 %}
     {% if foo.Mes == 6 %}
-            {% if foo.SemanaDelYear == 24 %}
-                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}</td>
-            {% endif %}
+        {% if foo.SemanaDelYear == 20 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 21 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 22 %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                        <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+
+                </td>
+        {% endif %}
+
+
+        {% if foo.SemanaDelYear == 23 %}
+
+                <td class="_{{foo.SemanaDelYear}}"> {{ forloop.counter0 }}---  {{ foo.Referencia}}---{{foo.SemanaDelYear}}
+                        <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+                {% if not forloop.last %}
+                 </td>
+                {% endif %}
+
+        {% endif %}
+
+
+        {% if foo.SemanaDelYear == 24 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                        <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 25 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                        <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 26 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                        <div>
+                                    <div id="span1" class="t">1</div>
+                                    <div id="span2" class="t ">1</div>
+                                    <div id="span3" class="t ">1</div>
+                                    <div id="span4" class="t ">1</div>
+                                </div>
+
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Julio</td>
+    <td  class="meses" >Julio</td>
     {% for foo in C01 %}
     {% if foo.Mes == 7 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 26 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 27 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 28 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 29 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 30 %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+            </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 31 %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Agosto</td>
+    <td  class="meses" >Agosto</td>
     {% for foo in C01 %}
     {% if foo.Mes == 8 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 27 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 28 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 29 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 30 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 31 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 32 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 33 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 34 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 35 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Septiembre</td>
+    <td  class="meses" >Septiembre</td>
     {% for foo in C01 %}
     {% if foo.Mes == 9 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 32 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 33 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 34 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 35 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 36 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Octubre</td>
+    <td  class="meses" >Octubre</td>
     {% for foo in C01 %}
     {% if foo.Mes == 10 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 37 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 38 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 39 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 40 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Noviembre</td>
+    <td  class="meses" >Noviembre</td>
     {% for foo in C01 %}
     {% if foo.Mes == 11 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 41 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 42 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 43 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 44 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C01" >Diciembre</td>
+    <td  class="meses" >Diciembre</td>
     {% for foo in C01 %}
     {% if foo.Mes == 12 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 45 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 46 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 47 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 48 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td></td>
+    <td colspan="53" style="background-color: #009688"></td>
 </tr>
+
 <tr>
-    <td  class="C02" >Enero</td>
+    <td  class="meses" >Enero</td>
+    <td rowspan="12" class="jenny" >
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="letras ">
+         JENNY
+        </div>
+
+    </td>
     {% for foo in C02 %}
     {% if foo.Mes == 1 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 1 %}
+                <td class="_{{foo.SemanaDelYear}}">
+
+                    {{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 2 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 3%}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 4 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Febrero</td>
-    {% for foo in C02 %}
+    <td  class="meses" >Febrero</td>
+
+    {% for foo in meses %}
     {% if foo.Mes == 2 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 5 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 6 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 7 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 8 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Marzo</td>
+    <td  class="meses" >Marzo</td>
     {% for foo in C02 %}
     {% if foo.Mes == 3 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 9 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 10 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 11 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 12 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Abril</td>
+    <td  class="meses" >Abril</td>
     {% for foo in C02 %}
     {% if foo.Mes == 4 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 13 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 14 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 15 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 16 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Mayo</td>
+    <td  class="meses" >Mayo</td>
     {% for foo in C02 %}
     {% if foo.Mes == 5 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 16 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div></td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 17 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div></td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 18 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div></td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 19 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div></td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 20 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div></td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Junio</td>
+    <td  class="meses" >Junio</td>
     {% for foo in C02 %}
     {% if foo.Mes == 6 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 20 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 21 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 22 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 23 %}
+
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 24 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 25 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 26 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Julio</td>
+    <td  class="meses" >Julio</td>
     {% for foo in C02 %}
     {% if foo.Mes == 7 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 24 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 25 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 26 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 27 %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 28 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 29 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 30 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 31 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Agosto</td>
+    <td  class="meses" >Agosto</td>
     {% for foo in C02 %}
     {% if foo.Mes == 8 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 28 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 29 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 30 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 31 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 32 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 33 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}{% if foo.SemanaDelYear == 34 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Septiembre</td>
+    <td  class="meses" >Septiembre</td>
     {% for foo in C02 %}
     {% if foo.Mes == 9 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 33 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 34 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 35 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 36 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Octubre</td>
+    <td  class="meses" >Octubre</td>
     {% for foo in C02 %}
     {% if foo.Mes == 10 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 37 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 38 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 39 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 40 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Noviembre</td>
+    <td  class="meses" >Noviembre</td>
     {% for foo in C02 %}
     {% if foo.Mes == 11 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 41 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 42 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 43 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 44 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="C02" >Diciembre</td>
+    <td  class="meses" >Diciembre</td>
     {% for foo in C02 %}
     {% if foo.Mes == 12 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 45 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 46 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 47 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 48 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 
 <tr>
-    <td></td>
+    <td colspan="53" style="background-color: #ffff00"></td>
 </tr>
 <tr>
-    <td  class="mes" >Enero</td>
+    <td  class="meses" >Enero</td>
+    <td rowspan="12" class="pau" >
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="row">.</div>
+        <div class="letras ">
+            PAU
+        </div>
+    </td>
     {% for foo in C03 %}
     {% if foo.Mes == 1 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 1 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 2 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 3%}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 4 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Febrero</td>
-    {% for foo in C02 %}
+    <td  class="meses" >Febrero</td>
+    {% for foo in C03 %}
     {% if foo.Mes == 2 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+                {% if foo.SemanaDelYear == 5 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 6 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 7 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 8 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Marzo</td>
+    <td  class="meses" >Marzo</td>
     {% for foo in C03 %}
     {% if foo.Mes == 3 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+                {% if foo.SemanaDelYear == 9 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 10 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 11 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 12 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Abril</td>
+    <td  class="meses" >Abril</td>
     {% for foo in C03 %}
     {% if foo.Mes == 4 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 13 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 14 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 15 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 16 %}
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Mayo</td>
+    <td  class="meses" >Mayo</td>
     {% for foo in C03 %}
     {% if foo.Mes == 5 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+                {% if foo.SemanaDelYear == 17 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 18 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 19 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                            <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 20 %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                <div>
+                    <div id="span1" class="t">1</div>
+                    <div id="span2" class="t ">1</div>
+                    <div id="span3" class="t ">1</div>
+                    <div id="span4" class="t ">1</div>
+                </div>
+            </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Junio</td>
+    <td  class="meses" >Junio</td>
     {% for foo in C03 %}
     {% if foo.Mes == 6 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 21 %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 22 %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 23 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 24 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 25 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 26 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Julio</td>
+    <td  class="meses" >Julio</td>
     {% for foo in C03 %}
     {% if foo.Mes == 7 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 25 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 26 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                        <div id="span1" class="t">1</div>
+                        <div id="span2" class="t ">1</div>
+                        <div id="span3" class="t ">1</div>
+                        <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 27 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 28 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 29 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 30 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 31 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                    <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                    </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Agosto</td>
+    <td  class="meses" >Agosto</td>
     {% for foo in C03 %}
     {% if foo.Mes == 8 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 29 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 30 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 31 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 32 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 34 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 35 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Septiembre</td>
+    <td  class="meses" >Septiembre</td>
     {% for foo in C03 %}
     {% if foo.Mes == 9 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 33 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 34 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 35 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 36 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Octubre</td>
+    <td  class="meses" >Octubre</td>
     {% for foo in C03 %}
     {% if foo.Mes == 10 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 37 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 38 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 39 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 40 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Noviembre</td>
+    <td  class="meses" >Noviembre</td>
     {% for foo in C03 %}
     {% if foo.Mes == 11 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 41 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 42 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 43 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 44 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
 <tr>
-    <td  class="mes" >Diciembre</td>
+    <td  class="meses" >Diciembre</td>
     {% for foo in C03 %}
     {% if foo.Mes == 12 %}
-        <td>
-            {{ foo.Referencia }}
-        </td>
+        {% if foo.SemanaDelYear == 45 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 46 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 47 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
+        {% if foo.SemanaDelYear == 48 %}
+                <td class="_{{foo.SemanaDelYear}}">{{ foo.Referencia }}---{{foo.SemanaDelYear}}
+                                        <div>
+                            <div id="span1" class="t">1</div>
+                            <div id="span2" class="t ">1</div>
+                            <div id="span3" class="t ">1</div>
+                            <div id="span4" class="t ">1</div>
+                        </div>
+                </td>
+        {% endif %}
     {% endif %}
 {% endfor %}
 </tr>
-
-
-
-
+<tr>
+    <td colspan="53" style="background-color: #558b2f"></td>
+</tr>
 
 {% comment %}
 <tr>
@@ -994,3 +3082,4 @@
 </tbody>
 </table>
 {% endblock %}
+
